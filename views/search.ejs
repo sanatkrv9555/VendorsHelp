@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Results for "<%= query %>"</h2>
+    <div class="vendor-grid">
+      <% if (matches.length === 0) { %>
+        <p>No matching vendors found.</p>
+      <% } else { %>
+        <% matches.forEach(v => { %>
+          <div class="vendor-card">
+            <img src="/uploads/<%= v.shopPhoto %>" alt="<%= v.shopName %> Photo">
+            <h3><%= v.shopName %></h3>
+            <p><strong>Type:</strong> <%= v.shopType %></p>
+            <p><strong>Owner:</strong> <%= v.name %></p>
+            <p><strong>Location:</strong> <%= v.location %></p>
+            <p><strong>Items:</strong> <%= v.items %></p>
+            <div class="products">
+              <h4>Products:</h4>
+              <% v.products.forEach(p => { %>
+                <div class="product">
+                  <img src="/uploads/<%= p.photo %>" alt="<%= p.name %>">
+                  <p><strong><%= p.name %></strong></p>
+                  <p>Price: ₹<%= p.price %></p>
+                </div>
+              <% }) %>
+            </div>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

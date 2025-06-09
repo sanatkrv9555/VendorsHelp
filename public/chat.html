@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat with Shopkeeper</title>
+  <style>
+    body{
+        background-color: rgb(209, 237, 209);
+    }
+    .chat-container {
+  max-width: 650px;
+  margin: 50px auto;
+  margin-top:100px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgb(57, 56, 56);
+  color:white;
+}
+
+#chat-window {
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(15, 110, 110);
+  border-radius:10px;
+  box-shadow: 1px 1px 2px 2px violet;
+}
+
+#messages {
+  list-style-type: none;
+  padding: 0;
+  color:rgb(27, 28, 27);
+  font-style: italic;
+}
+
+#messages li {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #eff3f6;
+}
+
+#messageForm {
+  display: flex;
+  gap: 10px;
+}
+
+#messageForm input {
+  flex: 1;
+  padding: 10px;
+}
+
+#sendButton {
+  padding: 10px 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <h2>Chat with Shopkeeper</h2>
+    <div id="chat-window">
+      <ul id="messages"></ul>
+    </div>
+    <form id="messageForm">
+      <input id="username" placeholder="Your name" required />
+      <input id="messageInput" autocomplete="off" placeholder="Type your message here..." required />
+      <button id="sendButton">Send</button>
+    </form>
+  </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/chat.js"></script>
+
+</body>
+</html>

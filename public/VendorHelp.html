@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Help</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: white;
+      height:60px;
+    }
+    .navbar .brand {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .navbar input[type="text"] {
+      padding: 5px;
+      border-radius: 4px;
+      border: none;
+    }
+    .navbar .nav-right {
+      display: flex;
+      gap: 15px;
+    }
+    .navbar button {
+      padding: 6px 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-bottom:20px;
+      padding: 20px;
+    }
+    .carousel-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: slide 10s linear infinite;
+      margin-top:12px;
+      margin-bottom:15px;
+    }
+    .carousel-row img {
+      width: 25%;
+      margin:15px;
+      height: 240px;
+      border-radius:20px;
+      object-fit: cover;
+      padding: 5px;
+    }
+    .banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:5px;
+    }
+    .banner img
+    {
+          width:80%;
+          height:600px;
+          border-radius: none;
+          margin-top: 0px;
+
+    }
+    .zoomable-image {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.2); /* Controls the zoom level */
+  z-index: 10;
+  position: relative;
+}
+.custom-footer {
+  margin-top:100px;
+  background: linear-gradient(to right, #e6ffe6, #ccffcc);
+  padding: 50px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 220px;
+}
+
+.footer-section h5 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 20px;
+}
+
+.footer-section ul li a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #2a9d8f;
+}
+
+.footer-newsletter {
+  flex: 1 1 300px;
+  min-width: 400px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 10px 15px;
+  margin-top: 30px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.footer-newsletter button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #81c784, #4caf50);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background: linear-gradient(to right, #4caf50, #81c784);
+}
+
+.footer-bottom {
+  border-top: 1px solid #c0eac0;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.footer-social a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #2e7d32;
+  transform: scale(1.2);
+}
+.footer-newsletter h2{
+  margin-bottom: 20px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    width: 100%;
+  }
+}
+.carousel h1{
+  font-size: 45px;
+  position: relative;
+  left:200px;
+  margin-top:40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  height:80px;
+  background: linear-gradient(90deg, #152434, #07657e);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .brand {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-right div {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Base button style */
+.nav-right button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgb(243, 240, 240);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign as Customer - Green Gradient */
+.btn-customer-signup {
+  background: linear-gradient(135deg, #0d9a43, #03655d);
+}
+.btn-customer-signup:hover {
+  background: linear-gradient(135deg, #057137, #38ef7d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(17, 153, 142, 0.4);
+}
+
+/* Login as Customer - Yellow/Orange Gradient */
+.btn-customer-login {
+  background: linear-gradient(135deg, #e66c09, #e13809);
+  color: #212529;
+}
+.btn-customer-login:hover {
+  background: linear-gradient(135deg, #e8471a, #ee2b08);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(253, 160, 133, 0.4);
+}
+
+/* Login as Vendor - Blue Gradient */
+.btn-vendor-login {
+  background: linear-gradient(135deg, #9712ab, #043b3e);
+}
+.btn-vendor-login:hover {
+  background: linear-gradient(135deg, #2d0147, #5f029d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 242, 254, 0.4);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-right div {
+    margin-right: 0;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fceabb, #f7eac6);
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link:hover {
+  background: linear-gradient(90deg, #31302d, #13100f);
+  color:white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <div class="brand">Vendor Help  🛒</div>
+  <div class="nav-right">
+    <div><a href="#" class="nav-link">🏠 Home</a></div>
+    <div><a href="about.html" class="nav-link">ℹ️ About</a></div>
+    <div><a href="#" class="nav-link">📞 Contact</a></div>
+    <a href="http://localhost:5050/customer-register.html">
+      <button class="btn-customer-signup">Sign as Customer</button>
+    </a>
+    <a href="http://localhost:5050/customer.html">
+      <button class="btn-customer-login">Login as Customer</button>
+    </a>
+    <a href="http://localhost:5050/register.html">
+      <button class="btn-vendor-login">Login as Vendor</button>
+    </a>
+  </div>
+</div>
+
+
+  <div class="carousel">
+    <div class="banner">
+        <img src="image (1).jpg" alt="Banner" >
+      </div>
+      <h1>Top Products</h1>
+    <div class="carousel-row">
+        <!-- Row 1 -->
+         <img src="pharmacy-WEB.avif" alt="" class="zoomable-image" >
+         <img src="Pet-Care_WEB.avif" alt="" class="zoomable-image" >
+         <img src="1c0db977-31ab-4d8e-abf3-d42e4a4b4632.avif" alt="" class="zoomable-image" >
+    </div>
+    <div class="carousel-row">
+        <!-- Row 1 -->
+         <img src="download.jpeg" alt="" class="zoomable-image" >
+         <img src="download (8).jpeg" alt="" class="zoomable-image" >
+         <img src="pexels-pixabay-325876.jpg" alt="" class="zoomable-image" >
+    </div>
+    <div class="carousel-row">
+<!-- Row 2 -->
+<img src="images (1).jpeg" alt="Clothes" class="zoomable-image" >
+<img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=400&h=200&q=60" alt="Clothes" class="zoomable-image">
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=400&h=200&q=60" alt="Local Market" class="zoomable-image">
+
+    </div>
+  </div>
+  <footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h5>🔗 Quick Links</h5>
+      <ul>
+        <li><a href="#">🏠 Home</a></li>
+        <li><a href="#">✨ Features</a></li>
+        <li><a href="#">💰 Pricing</a></li>
+        <li><a href="#">❓ FAQs</a></li>
+        <li><a href="#">ℹ️ About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h5>📚 Resources</h5>
+      <ul>
+        <li><a href="#">📄 Documentation</a></li>
+        <li><a href="#">🌐 Community</a></li>
+        <li><a href="#">🎓 Tutorials</a></li>
+        <li><a href="#">🛠️ Support</a></li>
+        <li><a href="#">📝 Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h5>🏢 Company</h5>
+      <ul>
+        <li><a href="#">👨‍💼 About Us</a></li>
+        <li><a href="#">📈 Careers</a></li>
+        <li><a href="#">📬 Contact</a></li>
+        <li><a href="#">🤝 Partners</a></li>
+        <li><a href="#">🔐 Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h2>📬 Subscribe to our newsletter</h2>
+      <p>🗓️ Monthly digest of what’s new and exciting from us.</p>
+      <form>
+        <input type="email" placeholder="📧 Email address" required>
+        <button type="submit">✅ Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 🌱 GreenConnect Inc. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter">🐦</a>
+      <a href="#" aria-label="Instagram">📸</a>
+      <a href="#" aria-label="Facebook">📘</a>
+      <a href="#" aria-label="LinkedIn">💼</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script>
+  function toggleZoom(img) {
+    img.classList.toggle('zoomed');
+  }
+</script>
+
+</html>

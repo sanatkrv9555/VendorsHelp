@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-container {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background: #2c5364;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #203a43;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+  <h2>Register as a Customer</h2>
+  <form action="/register-customer" method="POST">
+    
+    <label for="name">Customer Name:</label>
+    <input type="text" name="name" placeholder="Enter your name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" name="age" placeholder="Enter your age" required>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="Enter your email" required>
+
+    <label for="latitude">Latitude:</label>
+    <input type="number" step="any" name="latitude" placeholder="Latitude" required />
+
+    <label for="longitude">Longitude:</label>
+    <input type="number" step="any" name="longitude" placeholder="Longitude" required />
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+</body>
+</html>
